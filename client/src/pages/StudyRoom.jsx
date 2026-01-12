@@ -8,7 +8,7 @@ import Navbar from "../components/common/Navbar";
 import toast from "react-hot-toast";
 import BlockerUI from "../components/common/blockerUI.jsx"
 import { Notification } from "../utils/Notification.jsx";
-import Footer from "../components/common/footer.jsx";
+import Footer from "../components/common/Footer.jsx";
 import { Monitor, Check, LogOut, Users, Play, Loader2, Info, AlertCircle, Copy, Settings2, Zap, Trophy, TimerIcon, ShieldAlert, CheckCircle2 } from "lucide-react";
 import { WelcomeNotification } from "../utils/WelcomeNotification.jsx";
 import { SessionCompleteNotification } from "../utils/SessionCompleteNotification.jsx";
