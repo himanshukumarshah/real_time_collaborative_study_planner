@@ -15,4 +15,9 @@ const server = app.listen(port, () => {
 
 const io = socketServer(server);
 
+// server health
+app.get("/health", (req, res) => {
+    res.send("OK");
+});
+
 roomSocketHandler(io);
