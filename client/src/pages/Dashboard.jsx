@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import DashboardRooms from "../components/dashboard/DashboardRooms";
 import DashboardStats from "../components/dashboard/DashboardStats";
 import { PlusCircle, DoorOpen, Sparkles, Loader2 } from "lucide-react";
-import Footer from "../components/common/footer";
+import Footer from "../components/common/Footer";
 
 const Dashboard = () => {
   const { user, isAuthenticated, initialized } = useAuth();
