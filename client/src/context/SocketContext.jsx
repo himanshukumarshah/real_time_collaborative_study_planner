@@ -5,7 +5,6 @@ import { useAuth } from "./AuthContext";
 const SocketContext = createContext(null);
 
 export const SocketProvider = ({ children }) => {
-    // console.log("SocketProvider MOUNTED");
 
     const { isAuthenticated } = useAuth();
     const socketRef = useRef(null);
@@ -15,15 +14,14 @@ export const SocketProvider = ({ children }) => {
     const getOrConnectSocket = () => {
         if (socketRef.current) return socketRef.current;
 
-        // console.log("CREATING SOCKET");
-
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const socket = io(import.meta.env.VITE_API_URL || "http://localhost:5000", {
+        const socket = io(import.meta.env.VITE_API_URL, {
             auth: { token },
             autoConnect: true,
             transports: ["websocket"],
+            withCredentials: true,
         });
 
         socketRef.current = socket;

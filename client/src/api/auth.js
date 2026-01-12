@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000",
-  withCredentials: false, // using Authorization header for JWT (MVP)
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true, 
 });
 
 // Attach token to every request if present
